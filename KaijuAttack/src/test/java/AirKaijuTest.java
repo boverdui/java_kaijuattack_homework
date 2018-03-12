@@ -12,8 +12,8 @@ public class AirKaijuTest {
 
     @Before
     public void before() {
-        airkaiju = new AirKaiju("Kamacuras", 10, 10);
-        tank = new Tank("Type 90", 10);
+        airkaiju = new AirKaiju("Kamacuras", 100, 10);
+        tank = new Tank("Type 90", 50);
     }
 
     @Test
@@ -23,7 +23,7 @@ public class AirKaijuTest {
 
     @Test
     public void hasHealthValue() {
-        assertEquals(10, airkaiju.getHealthValue());
+        assertEquals(100, airkaiju.getHealthValue());
     }
 
     @Test
@@ -44,7 +44,7 @@ public class AirKaijuTest {
     @Test
     public void canAttack() {
         airkaiju.attack(tank);
-        assertEquals(9, tank.getHealthValue());
+        assertEquals(40, tank.getHealthValue());
     }
 
 }

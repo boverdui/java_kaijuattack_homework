@@ -32,7 +32,7 @@ public abstract class Kaiju {
     }
 
     public void attack(Vehicle vehicle) {
-        vehicle.takeDamage();
+        vehicle.takeDamage(this.attackValue);
     }
 
 }

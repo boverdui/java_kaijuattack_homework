@@ -12,8 +12,8 @@ public class WaterKaijuTest {
 
     @Before
     public void before() {
-        waterkaiju = new WaterKaiju("Ebirah", 10, 10);
-        tank = new Tank("Type 90", 10);
+        waterkaiju = new WaterKaiju("Ebirah", 50, 5);
+        tank = new Tank("Type 90", 50);
     }
 
     @Test
@@ -23,12 +23,12 @@ public class WaterKaijuTest {
 
     @Test
     public void hasHealthValue() {
-        assertEquals(10, waterkaiju.getHealthValue());
+        assertEquals(50, waterkaiju.getHealthValue());
     }
 
     @Test
     public void hasAttackValue() {
-        assertEquals(10, waterkaiju.getAttackValue());
+        assertEquals(5, waterkaiju.getAttackValue());
     }
 
     @Test
@@ -44,7 +44,7 @@ public class WaterKaijuTest {
     @Test
     public void canAttack() {
         waterkaiju.attack(tank);
-        assertEquals(9, tank.getHealthValue());
+        assertEquals(45, tank.getHealthValue());
     }
 
 }

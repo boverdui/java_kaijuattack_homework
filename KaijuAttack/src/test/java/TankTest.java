@@ -10,7 +10,7 @@ public class TankTest {
 
     @Before
     public void before() {
-        tank = new Tank("Type 90", 10);
+        tank = new Tank("Type 90", 50);
     }
 
     @Test
@@ -25,8 +25,8 @@ public class TankTest {
 
     @Test
     public void canTakeDamage() {
-        tank.takeDamage();
-        assertEquals(9, tank.getHealthValue());
+        tank.takeDamage(10);
+        assertEquals(40, tank.getHealthValue());
     }
 
 }

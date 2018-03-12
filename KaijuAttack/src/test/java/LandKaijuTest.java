@@ -12,8 +12,8 @@ public class LandKaijuTest {
 
     @Before
     public void before() {
-        landkaiju = new LandKaiju("Gorosaurus", 10, 10);
-        tank = new Tank("Type 90", 10);
+        landkaiju = new LandKaiju("Gorosaurus", 200, 20);
+        tank = new Tank("Type 90", 50);
     }
 
     @Test
@@ -23,12 +23,12 @@ public class LandKaijuTest {
 
     @Test
     public void hasHealthValue() {
-        assertEquals(10, landkaiju.getHealthValue());
+        assertEquals(200, landkaiju.getHealthValue());
     }
 
     @Test
     public void hasAttackValue() {
-        assertEquals(10, landkaiju.getAttackValue());
+        assertEquals(20, landkaiju.getAttackValue());
     }
 
     @Test
@@ -44,7 +44,7 @@ public class LandKaijuTest {
     @Test
     public void canAttack() {
         landkaiju.attack(tank);
-        assertEquals(9, tank.getHealthValue());
+        assertEquals(30, tank.getHealthValue());
     }
 
 }

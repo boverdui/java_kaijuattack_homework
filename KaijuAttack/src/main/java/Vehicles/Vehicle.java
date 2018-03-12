@@ -18,8 +18,8 @@ public abstract class Vehicle {
         return this.healthValue;
     }
 
-    public void takeDamage() {
-        healthValue --;
+    public void takeDamage(int attackvalue) {
+        healthValue -= attackvalue;
     }
 
 }

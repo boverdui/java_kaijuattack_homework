@@ -10,7 +10,7 @@ public class TruckTest {
 
     @Before
     public void before() {
-        truck = new Truck("Toyota Type 73", 5);
+        truck = new Truck("Toyota Type 73", 10);
     }
 
     @Test
@@ -20,13 +20,13 @@ public class TruckTest {
 
     @Test
     public void hasHealthValue() {
-        assertEquals(5, truck.getHealthValue());
+        assertEquals(10, truck.getHealthValue());
     }
 
     @Test
-    public void canTakeDamnmage() {
-        truck.takeDamage();
-        assertEquals(4, truck.getHealthValue());
+    public void canTakeDamage() {
+        truck.takeDamage(10);
+        assertEquals(0, truck.getHealthValue());
     }
 
 }
